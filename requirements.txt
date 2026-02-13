@@ -4,3 +4,4 @@ google-generativeai
 huggingface_hub
 python-dotenv
 gunicorn
+Pillow
