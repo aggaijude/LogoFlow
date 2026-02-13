@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+venv/
+env/
+
+# Environment Variables (Critical for security)
+.env
+.env.local
+
+# Flask
+instance/
+.webassets-cache
+
+# Streamlit (Old)
+.streamlit/

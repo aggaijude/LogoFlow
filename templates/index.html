@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logoflow - AI Branding Partner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div class="animation-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="container glass-panel center-content">
+        <h1>🧠 Logoflow</h1>
+        <p class="subtitle">Your AI Branding Partner</p>
+        <p>Generate unique brand names and professional logos in seconds.</p>
+        <button id="continue-btn" class="primary-btn">Continue 🚀</button>
+    </div>
+
+
+
+    <!-- Main Dashboard -->
+    <div class="container hidden" id="main-dashboard">
+
+        <!-- Header -->
+        <header>
+            <div class="logo-area">
+                <div class="logo-icon">🧠</div>
+                <h1>Logoflow</h1>
+            </div>
+            <p class="subtitle">Your AI Branding Partner</p>
+        </header>
+
+        <!-- Step 1: Vision -->
+        <section class="step-section glass-panel">
+            <h3>1. Vision Board</h3>
+            <textarea id="project-desc"
+                placeholder="Describe your project idea, vibe, and target audience..."></textarea>
+
+            <div class="controls">
+                <select id="gemini-model">
+                    <option value="gemini-3-flash-preview">Gemini 3 Flash (Preview)</option>
+                    <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
+                    <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
+                </select>
+                <button id="generate-names-btn" class="secondary-btn">✨ Generate Names</button>
+            </div>
+        </section>
+
+        <!-- Results Area -->
+        <div class="results-grid">
+
+            <!-- Step 2: Names -->
+            <section class="step-section glass-panel" id="names-section">
+                <h3>2. Choose Identity</h3>
+                <div id="names-list" class="names-grid">
+                    <p class="placeholder-text">Names will appear here...</p>
+                </div>
+            </section>
+
+            <!-- Step 3: Logo -->
+            <section class="step-section glass-panel" id="logo-section">
+                <h3>3. Visual Mark</h3>
+                <div id="logo-display" class="logo-viewer">
+                    <div class="logo-placeholder">🎨</div>
+                    <p>Select a name to generate logo</p>
+                </div>
+                <button id="generate-logo-btn" class="primary-btn hidden" disabled>🎨 Generate Logo</button>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner"></div>
+        <p id="loading-text">Thinking...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
